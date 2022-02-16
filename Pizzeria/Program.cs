@@ -11,15 +11,25 @@ namespace Pizzeria
     {
         static void Main(string[] args)
         {
-            SimplePizzaFactory factory = new SimplePizzaFactory();
-            PizzaStore pizza = new PizzaStore(factory);
+            PizzaStore NYPizza = new NYPizzaStore();
+            PizzaStore ChicagoPizza = new ChicagoPizzaStore();
+            PizzaStore CaliforniaPizza = new CaliforniaPizzaStore();
 
-            
+            Console.WriteLine(NYPizza.createPizza("Сыр").Display());
+            Console.WriteLine(ChicagoPizza.createPizza("Сыр").Display());
+            Console.WriteLine(CaliforniaPizza.createPizza("Сыр").Display());
 
-            Console.WriteLine(pizza.orderPizza("Сыр").Display());
-            Console.WriteLine(pizza.orderPizza("Пепперони").Display());
-            Console.WriteLine(pizza.orderPizza("Моллюск").Display());
-            Console.WriteLine(pizza.orderPizza("Веган").Display());
+            Console.WriteLine(NYPizza.createPizza("Моллюск").Display());
+            Console.WriteLine(ChicagoPizza.createPizza("Моллюск").Display());
+            Console.WriteLine(CaliforniaPizza.createPizza("Моллюск").Display());
+
+            Console.WriteLine(NYPizza.createPizza("Пепперони").Display());
+            Console.WriteLine(ChicagoPizza.createPizza("Пепперони").Display());
+            Console.WriteLine(CaliforniaPizza.createPizza("Пепперони").Display());
+
+            Console.WriteLine(NYPizza.createPizza("Веган").Display());
+            Console.WriteLine(ChicagoPizza.createPizza("Веган").Display());
+            Console.WriteLine(CaliforniaPizza.createPizza("Веган").Display());
 
             Console.ReadKey();
         }

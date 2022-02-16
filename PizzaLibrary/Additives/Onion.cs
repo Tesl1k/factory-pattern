@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PizzaLibrary
 {
-    public class PepperoniPizza : Pizza
+    public class Onion : Veggies
     {
-        public PepperoniPizza()
+        public Veggies[] createVeggies()
         {
-            description = "Пицца с пепперони";
+            return Pizza.veggies;
         }
     }
 }

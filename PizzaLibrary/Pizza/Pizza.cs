@@ -8,8 +8,17 @@ namespace PizzaLibrary
 {
     abstract public class Pizza
     {
+        
+        public static Dough dough;
+        public static Sauce sauce;
+        public static Veggies[] veggies;
+        public static Cheese cheese;
+        public static Pepperoni pepperoni;
+        public static Clams clam;
+
         string display;
-        protected string description;
+        public string description;
+        public string style;
 
         string Bake()
         {
@@ -26,14 +35,11 @@ namespace PizzaLibrary
             return "Пицца нарезана";
         }
 
-        string Prepare()
-        {
-            return "Пицца подготовлена";
-        }
+        public abstract string Prepare();
 
         public string Display()
         {
-            return display = $"{description}:\n{Prepare()}\n{Bake()}\n{Cut()}\n{Box()}\n";
+            return display = $"{description}:\n{Prepare()}\n{Bake()}\n{Cut()}\n{Box()}\nСтиль: {style}\n";
         }
     }
 }

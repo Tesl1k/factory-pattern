@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace PizzaLibrary
 {
-    public class CheesePizza : Pizza
+    public interface Clams
     {
-
-        public CheesePizza()
-        {
-            description = "Сырная пицца";
-        }
+        Clams createClams();
     }
 }
